@@ -1,10 +1,17 @@
 <template>
-  <p class="message">メッセージ: {{ msg }}</p>
+  <div>
+    <InputComponent />
+    <p class="message">メッセージ: {{ msg }}</p>
+  </div>
 </template>
 
 <script>
+import InputComponent from "./InputComponent.vue";
 export default {
   name: "app",
+  components: {
+    InputComponent,
+  },
   data() {
     return { msg: "こんにちは！" };
   },
@@ -16,4 +23,3 @@ export default {
   color: #42b983;
 }
 </style>
-
