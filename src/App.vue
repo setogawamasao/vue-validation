@@ -1,7 +1,19 @@
 <template>
   <div>
-    <InputComponent />
-    <p class="message">メッセージ: {{ msg }}</p>
+    <InputComponent
+      v-model="sampleForm.text1"
+      placeholder="サンプル1"
+      name="sample-input1"
+      type="text1"
+    />
+    <p class="message">メッセージ: {{ sampleForm.text1 }}</p>
+    <InputComponent
+      v-model="sampleForm.text2"
+      placeholder="サンプル2"
+      name="sample-input2"
+      type="text2"
+    />
+    <p class="message">メッセージ: {{ sampleForm.text2 }}</p>
   </div>
 </template>
 
@@ -13,7 +25,7 @@ export default {
     InputComponent,
   },
   data() {
-    return { msg: "こんにちは！" };
+    return { sampleForm: { text1: "", text2: "" } };
   },
 };
 </script>
